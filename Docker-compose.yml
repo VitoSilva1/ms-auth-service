@@ -29,6 +29,10 @@ services:
       - db
     environment:
       DATABASE_URL: mysql+pymysql://fintrack_admin:Vicente5150.@db:3306/fintrack_db
+      USER_SERVICE_URL: ${USER_SERVICE_URL:-http://host.docker.internal:8000}
+      INTERNAL_API_KEY: ${INTERNAL_API_KEY:-fintruck-internal}
+      SECRET_KEY: ${SECRET_KEY:-change-this-secret}
+      ACCESS_TOKEN_EXPIRE_MINUTES: ${ACCESS_TOKEN_EXPIRE_MINUTES:-30}
     ports:
       - "8001:8000"
     command: >
