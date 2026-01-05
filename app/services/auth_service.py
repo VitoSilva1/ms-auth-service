@@ -42,3 +42,6 @@ def authenticate_user(email: str, password: str) -> Optional[dict]:
         status_info = f"{status_info}: {detail_message}"
 
     raise UserServiceUnavailable(status_info)
+
+
+# este es un texto para realizar pruebas
